@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Nómina - Colombia</title>
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Mi Nómina</h1>
+    <h2>Calculadora de Nómina</h2>
+
+    <form id="payForm" class="card">
+      <fieldset>
+        <legend>Datos de la empresa</legend>
+        <label>Nombre de la empresa
+          <input type="text" id="companyName" required />
+        </label>
+        <label>NIT
+          <input type="text" id="companyNIT" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos del empleado</legend>
+        <label>Nombre del empleado
+          <input type="text" id="employeeName" required />
+        </label>
+        <label>Cédula
+          <input type="text" id="employeeID" />
+        </label>
+        <label>Sueldo mensual (COP)
+          <input type="number" id="salary" min="0" step="0.01" required />
+        </label>
+        <label>Fecha de Inicio
+          <input type="date" id="dateStart" required />
+        </label>
+        <label>Fecha final (o hoy si sigue activo)
+          <input type="date" id="dateEnd" required />
+        </label>
+        <label>
+          ¿Devenga auxilio de transporte?
+          <select id="transportEligibility">
+            <option value="auto">Calcular según salario (hasta 2 SMMLV)</option>
+            <option value="yes">Sí (forzar)</option>
+            <option value="no">No (forzar)</option>
+          </select>
+        </label>
+
+        <label>Otros Auxilios (Telecomunicaciones, alimentacion, etc...)
+         <input type="number" id="otroaux" min="0" step="0.01" required />
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" id="calcBtn">Calcular nómina</button>
+        <button type="button" id="clearBtn">Limpiar</button>
+      </div>
+    </form>
+
+    <section id="results" class="card hidden">
+      <h2>Resultado de la liquidación</h2>
+
+      <div id="summary">
+        <!-- resumen breve -->
+      </div>
+
+      <div class="table-wrap">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Valor (COP)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- llenado dinámico -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <button id="exportPdf">Exportar a PDF</button>
+        <button id="downloadJson">Descargar JSON</button>
+      </div>
+
+      <small class="nota">
+        Valores calculados según reglas generales (salud 4%, pensión 4%, prima, cesantías, intereses 12% anual, vacaciones). Ver fuentes en la aplicación.
+      </small>
+    </section>
+
+    <p>Version 0.1 - 14/12/2025 | Creado por Samir Vivas - 2025 | Contacto: bryansamir@gmail.com</p>
+ <a href="https://github.com/samirvivast?tab=repositories">Descargar código fuente</a>
+  </main>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>

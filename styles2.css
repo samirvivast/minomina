@@ -1,0 +1,108 @@
+:root{
+  --bg:#e6e6e6;
+  --card:#ffffff;
+  --muted:#000000;
+  --accent:#0b5fff;
+  --shadow: 0 6px 18px rgba(189, 189, 189, 0.08);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background-color:#ffffff;
+  padding:24px;
+  color:#000000;
+}
+
+.container{
+  max-width:980px;
+  margin:0 auto;
+  
+}
+
+h1{margin:0 0 12px;font-size:1.6rem}
+h2{margin:0 0 8px;font-size:1.2rem}
+
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+}
+
+form label{
+  display:block;
+  margin-bottom:8px;
+  font-size:0.95rem;
+  color:var(--muted);
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select{
+  width:100%;
+  padding:8px 10px;
+  margin-top:6px;
+  border-radius:0px;
+  border:1px solid #000000;
+  font-size:0.95rem;
+  background-color: #ffffff;   /* color de fondo */
+  color: #000000;                 /* color del texto */
+}
+
+fieldset{
+  border:1px solid #111111;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:12px;
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:8px;
+}
+
+button{
+  background:var(--accent);
+  color:rgb(255, 255, 255);
+  border:0;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button#clearBtn{background:#7a8aa6}
+button#downloadJson{background:#2b9f3a}
+
+.hidden{display:none}
+
+.table-wrap{
+  overflow:auto;
+  margin-top:12px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.95rem;
+}
+
+th,td{
+  padding:10px 8px;
+  text-align:left;
+  border-bottom:1px solid #000000;
+  color:#000000;
+}
+
+th{
+background:#000000;
+color:#ffffff;
+}
+
+.nota{display:block;margin-top:10px;color:#000000;font-size:0.9rem}
